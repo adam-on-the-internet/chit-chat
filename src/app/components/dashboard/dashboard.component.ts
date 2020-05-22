@@ -7,7 +7,6 @@ import {NavHelperService} from "src/app/services/nav-helper.service";
   styleUrls: ["./dashboard.component.css"]
 })
 export class DashboardComponent {
-
   constructor(
     private navHelper: NavHelperService,
   ) {

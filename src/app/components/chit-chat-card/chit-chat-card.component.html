@@ -1,0 +1,16 @@
+<app-card>
+  <div id="question" *ngIf="ready; else loading">
+    <h3>
+      {{chitChat.question}}
+    </h3>
+    <br>
+    <button class="btn btn-primary" (click)="loadRandom()">
+      Next
+      <i class="fa fa-arrow-right"></i>
+    </button>
+  </div>
+</app-card>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

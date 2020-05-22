@@ -20,6 +20,7 @@ import {BodyAltComponent} from "./components/body-alt/body-alt.component";
 import {ChitChatOverviewComponent} from './components/chit-chat-overview/chit-chat-overview.component';
 import {ChitChatTableComponent} from './components/chit-chat-table/chit-chat-table.component';
 import {ChitChatFormComponent} from './components/chit-chat-form/chit-chat-form.component';
+import { ChitChatCardComponent } from './components/chit-chat-card/chit-chat-card.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {ChitChatFormComponent} from './components/chit-chat-form/chit-chat-form.
     ChitChatOverviewComponent,
     ChitChatTableComponent,
     ChitChatFormComponent,
+    ChitChatCardComponent,
   ],
   imports: [
     BrowserModule,
