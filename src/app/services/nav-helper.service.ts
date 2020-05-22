@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
-import { ROUTES_ENUM } from "../constants/routing.constants";
+import {Injectable} from "@angular/core";
+import {Router} from "@angular/router";
+import {ROUTES_ENUM} from "../constants/routing.constants";
 
 @Injectable({
   providedIn: "root"
@@ -9,7 +9,8 @@ export class NavHelperService {
 
   constructor(
     private router: Router,
-  ) { }
+  ) {
+  }
 
   public goToDashboard(): void {
     this.goToRoute(ROUTES_ENUM.Dashboard);
@@ -33,24 +34,16 @@ export class NavHelperService {
 
   // PROJECTS
 
-  public goBookmarks(): void {
-    this.goToRoute(ROUTES_ENUM.Bookmarks);
+  public goChitChatOverview(): void {
+    this.goToRoute(ROUTES_ENUM.ChitChatOverview);
   }
 
-  public goBookmarkOverview(): void {
-    this.goToRoute(ROUTES_ENUM.BookmarkOverview);
+  public goToChitChatCreateForm(): void {
+    this.goToRoute(ROUTES_ENUM.ChitChatForm);
   }
 
-  public goToBookmarkDetails(id: string): void {
-    this.goToRoutes([ROUTES_ENUM.BookmarkOverview, id]);
-  }
-
-  public goToBookmarkCreateForm(): void {
-    this.goToRoute(ROUTES_ENUM.BookmarkForm);
-  }
-
-  public goToBookmarkEditForm(id: string): void {
-    this.goToRoutes([ROUTES_ENUM.BookmarkForm, id]);
+  public goToChitChatEditForm(id: string): void {
+    this.goToRoutes([ROUTES_ENUM.ChitChatForm, id]);
   }
 
   // GENERAL

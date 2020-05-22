@@ -1,0 +1,19 @@
+<app-body>
+  <div class="row">
+    <div class="col-md-10 mx-auto my-3">
+      <app-card [title]="'Chit Chat Overview'">
+        <p>
+          <button class="btn btn-success" (click)="goToCreateForm()">
+            <i class="fa fa-plus"></i>
+            Add a Chit Chat
+          </button>
+        </p>
+        <app-chit-chat-table [chitChats]="chitChats" *ngIf="ready; else loading"></app-chit-chat-table>
+      </app-card>
+    </div>
+  </div>
+</app-body>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>
