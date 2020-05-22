@@ -7,18 +7,27 @@
           <form>
             <section id="question">
               1. Question:
-              <br />
+              <br/>
               <input
                 type="text"
                 name="question"
                 [(ngModel)]="chitChat.question"
-              /><br /><br />
-              <hr />
+              /><br/><br/>
+              <hr/>
             </section>
             <section id="hidden" *ngIf="editMode">
               2. Hidden:
-              {{chitChat.hidden}}
-              <hr />
+              <p>
+                <button class="btn btn-secondary mx-1 my-1" [class.active]="chitChat.hidden" (click)="toggleHidden()">
+                  <i class="fa fa-check" *ngIf="chitChat.hidden"></i>
+                  Hidden
+                </button>
+                <button class="btn btn-secondary mx-1 my-1" [class.active]="!chitChat.hidden" (click)="toggleHidden()">
+                  <i class="fa fa-check" *ngIf="!chitChat.hidden"></i>
+                  Shown
+                </button>
+              </p>
+              <hr/>
             </section>
             <div
               class="error-report alert alert-danger"

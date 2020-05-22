@@ -49,10 +49,15 @@ export class ChitChatFormComponent implements OnInit {
     private route: ActivatedRoute,
     private chitChatService: ChitChatService,
     private navHelper: NavHelperService,
-  ) { }
+  ) {
+  }
 
   public ngOnInit() {
     this.setupForm();
+  }
+
+  public toggleHidden() {
+    this.chitChat.hidden = !this.chitChat.hidden;
   }
 
   public submit() {
