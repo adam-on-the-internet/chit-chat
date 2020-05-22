@@ -1,1 +1,44 @@
-{{chitChats | json}}
+<p *ngIf="!hasChats">
+  No chats available.
+</p>
+
+<p *ngIf="hasChats">
+  Showing {{chitChats.length}} chit chat(s)
+</p>
+
+<table class="table table-striped" *ngIf="hasChats">
+  <thead>
+  <tr>
+    <th>
+      Question
+    </th>
+    <th>
+      Hidden
+    </th>
+    <th>
+      Edit
+    </th>
+    <th>
+      Delete
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let chitChat of chitChats">
+    <td>{{chitChat.question}}</td>
+    <td>{{chitChat.hidden}}</td>
+    <td>
+      <button class="btn btn-warning" (click)="edit(chitChat)">
+        <i class="fa fa-pencil"></i>
+        Edit
+      </button>
+    </td>
+    <td>
+      <button class="btn btn-danger" (click)="delete(chitChat)">
+        <i class="fa fa-trash"></i>
+        Delete
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
