@@ -17,11 +17,6 @@ import {BodyComponent} from "./components/body/body.component";
 import {LoadingComponent} from "./components/loading/loading.component";
 import {CardComponent} from "./components/card/card.component";
 import {BodyAltComponent} from "./components/body-alt/body-alt.component";
-import {BookmarkDetailsComponent} from "./components/bookmark-details/bookmark-details.component";
-import {BookmarkFormComponent} from "./components/bookmark-form/bookmark-form.component";
-import {BookmarkOverviewComponent} from "./components/bookmark-overview/bookmark-overview.component";
-import {BookmarkTableComponent} from "./components/bookmark-table/bookmark-table.component";
-import {BookmarksComponent} from "./components/bookmarks/bookmarks.component";
 import {ChitChatOverviewComponent} from './components/chit-chat-overview/chit-chat-overview.component';
 import {ChitChatTableComponent} from './components/chit-chat-table/chit-chat-table.component';
 import {ChitChatFormComponent} from './components/chit-chat-form/chit-chat-form.component';
@@ -41,11 +36,6 @@ import {ChitChatFormComponent} from './components/chit-chat-form/chit-chat-form.
     LoadingComponent,
     CardComponent,
     BodyAltComponent,
-    BookmarkDetailsComponent,
-    BookmarkFormComponent,
-    BookmarkOverviewComponent,
-    BookmarkTableComponent,
-    BookmarksComponent,
     ChitChatOverviewComponent,
     ChitChatTableComponent,
     ChitChatFormComponent,

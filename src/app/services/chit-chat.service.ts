@@ -25,6 +25,15 @@ export class ChitChatService {
     return this.http.get(url, CookieHelper.authHeaders) as Observable<ChitChat[]>;
   }
 
+  public getSingle(id: string): Observable<ChitChat> {
+    const url = RestUrlBuilder.buildRestUrl({
+      service: ServiceUrl.BasicExpress,
+      controller,
+      collection: id,
+    });
+    return this.http.get(url, CookieHelper.authHeaders) as Observable<ChitChat>;
+  }
+
   public getRandom(): Observable<ChitChat> {
     const url = RestUrlBuilder.buildRestUrl({
       service: ServiceUrl.BasicExpress,
@@ -35,6 +44,15 @@ export class ChitChatService {
   }
 
   public create(chitChat: ChitChat): Observable<any> {
+    const url = RestUrlBuilder.buildRestUrl({
+      service: ServiceUrl.BasicExpress,
+      controller,
+      collection: "unhidden"
+    });
+    return this.http.post(url, chitChat, CookieHelper.authHeaders) as Observable<any>;
+  }
+
+  public suggest(chitChat: ChitChat): Observable<any> {
     const url = RestUrlBuilder.buildRestUrl({
       service: ServiceUrl.BasicExpress,
       controller

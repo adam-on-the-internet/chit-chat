@@ -1,1 +1,46 @@
-<p>chit-chat-form works!</p>
+<ng-container *ngIf="ready; else notReady">
+  <app-header [title]="title"></app-header>
+  <app-body>
+    <div class="row">
+      <div class="col-md-12 my-3">
+        <app-card>
+          <form>
+            <section id="question">
+              1. Question:
+              <br />
+              <input
+                type="text"
+                name="question"
+                [(ngModel)]="chitChat.question"
+              /><br /><br />
+              <hr />
+            </section>
+            <section id="hidden">
+              2. Hidden:
+              {{chitChat.hidden}}
+              <hr />
+            </section>
+            <div
+              class="error-report alert alert-danger"
+              *ngIf="showErrors && !valid"
+            >
+              <p>Please correct the following errors:</p>
+              <ul>
+                <li *ngFor="let error of errors">
+                  {{ error }}
+                </li>
+              </ul>
+            </div>
+            <button class="btn btn-primary" (click)="submit()">
+              Save Bookmark
+            </button>
+          </form>
+        </app-card>
+      </div>
+    </div>
+  </app-body>
+</ng-container>
+
+<ng-template #notReady>
+  <app-loading></app-loading>
+</ng-template>
