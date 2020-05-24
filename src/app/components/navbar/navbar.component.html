@@ -19,29 +19,29 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" (click)="goToInfo()">
-          Info
-        </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" (click)="goSuggest()">
+        <a class="nav-link px-2" (click)="goSuggest()">
           Suggest
         </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="https://aoti-app-hub.herokuapp.com/donate" target="_blank">
+        <a class="nav-link px-2" (click)="goToInfo()">
+          Info
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link px-2" href="https://aoti-app-hub.herokuapp.com/donate" target="_blank">
           Donate
         </a>
       </li>
       <ng-container *ngIf="isLoggedIn">
         <li class="nav-item">
-          <a class="nav-link" (click)="goToProfile()">Your profile</a>
+          <a class="nav-link px-2" (click)="goToProfile()">Your profile</a>
         </li>
         <li class="nav-item" *ngIf="isAdmin">
-          <a class="nav-link" (click)="goToAdmin()">Admin panel</a>
+          <a class="nav-link px-2" (click)="goToAdmin()">Admin panel</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="logout()">Logout</a>
+          <a class="nav-link px-2" (click)="logout()">Logout</a>
         </li>
       </ng-container>
     </ul>

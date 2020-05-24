@@ -1,16 +1,22 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 
-import { SuggestComponent } from './suggest.component';
+import {SuggestComponent} from "./suggest.component";
+import {RouterTestingModule} from "@angular/router/testing";
+import {CardComponent} from "../card/card.component";
+import {FormsModule} from "@angular/forms";
+import {BodyComponent} from "../body/body.component";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
-describe('SuggestComponent', () => {
+describe("SuggestComponent", () => {
   let component: SuggestComponent;
   let fixture: ComponentFixture<SuggestComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SuggestComponent ]
+      declarations: [SuggestComponent, CardComponent, BodyComponent],
+      imports: [RouterTestingModule, FormsModule, HttpClientTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +25,7 @@ describe('SuggestComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

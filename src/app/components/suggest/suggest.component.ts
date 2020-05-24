@@ -1,13 +1,13 @@
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
 import {NavHelperService} from "../../services/nav-helper.service";
 import {BooleanHelper} from "../../utilities/boolean.util";
 import {ChitChatService} from "../../services/chit-chat.service";
 import {ChitChat} from "../../models/ChitChat.model";
 
 @Component({
-  selector: 'app-suggest',
-  templateUrl: './suggest.component.html',
-  styleUrls: ['./suggest.component.scss']
+  selector: "app-suggest",
+  templateUrl: "./suggest.component.html",
+  styleUrls: ["./suggest.component.scss"]
 })
 export class SuggestComponent {
   public chitChat: ChitChat = {
