@@ -1,7 +1,7 @@
 <app-card [autoHeight]="false" [title]="'Chit Chat Card'" [subtitle]="'A conversation starter...'">
   <hr>
   <div id="question" *ngIf="ready; else loading">
-    <h3>
+    <h3 class="text-center">
       {{chitChat.question}}
     </h3>
     <hr>
