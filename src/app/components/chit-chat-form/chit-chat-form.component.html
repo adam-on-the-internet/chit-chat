@@ -29,6 +29,16 @@
               </p>
               <hr/>
             </section>
+            <section id="credit">
+              3. Credit:
+              <br/>
+              <input
+                type="text"
+                name="credit"
+                [(ngModel)]="chitChat.credit"
+              /><br/><br/>
+              <hr/>
+            </section>
             <div
               class="error-report alert alert-danger"
               *ngIf="showErrors && !valid"

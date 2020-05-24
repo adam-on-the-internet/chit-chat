@@ -118,6 +118,7 @@ export class ChitChatFormComponent implements OnInit {
     this.chitChat = {
       question: null,
       hidden: false,
+      credit: null,
       _id: null,
     };
   }
