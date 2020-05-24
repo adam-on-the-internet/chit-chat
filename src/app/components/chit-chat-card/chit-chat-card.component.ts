@@ -15,6 +15,10 @@ export class ChitChatCardComponent implements OnInit {
     return BooleanHelper.hasValue(this.chitChat);
   }
 
+  private get previousId(): string {
+    return this.ready ? this.chitChat._id : null;
+  }
+
   constructor(
     private chitChatService: ChitChatService,
   ) {
@@ -25,7 +29,7 @@ export class ChitChatCardComponent implements OnInit {
   }
 
   public loadRandom() {
-    this.chitChatService.getRandom()
+    this.chitChatService.getRandom(this.previousId)
       .subscribe((res) => this.chitChat = res,
         (error) => {
           console.log("get chitchat failed");

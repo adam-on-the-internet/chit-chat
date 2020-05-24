@@ -5,6 +5,7 @@ import {RestUrlBuilder} from "../utilities/rest-url-builder.util";
 import {ServiceUrl} from "../constants/rest.constants";
 import {CookieHelper} from "../utilities/cookie.util";
 import {ChitChat} from "../models/ChitChat.model";
+import {BooleanHelper} from "../utilities/boolean.util";
 
 const controller = "chitChat";
 
@@ -34,12 +35,15 @@ export class ChitChatService {
     return this.http.get(url, CookieHelper.authHeaders) as Observable<ChitChat>;
   }
 
-  public getRandom(): Observable<ChitChat> {
-    const url = RestUrlBuilder.buildRestUrl({
+  public getRandom(previousId: string): Observable<ChitChat> {
+    let url = RestUrlBuilder.buildRestUrl({
       service: ServiceUrl.BasicExpress,
       controller,
       collection: "random",
     });
+    if (BooleanHelper.hasValue(previousId)) {
+      url = `${url}/${previousId}`;
+    }
     return this.http.get(url, CookieHelper.authHeaders) as Observable<ChitChat>;
   }
 
