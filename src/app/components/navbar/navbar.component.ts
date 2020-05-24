@@ -37,6 +37,10 @@ export class NavbarComponent {
     this.navHelper.goToProfile();
   }
 
+  public goToInfo(): void {
+    this.navHelper.goToInfo();
+  }
+
   public goToAdmin(): void {
     this.navHelper.goToAdmin();
   }

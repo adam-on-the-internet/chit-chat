@@ -1,13 +1,13 @@
 <div class="card border-primary" [class.h-100]="autoHeight">
-  <img class="card-img-top" [src]="imageUrl" *ngIf="hasImage" />
+  <img class="card-img-top" [src]="imageUrl" *ngIf="hasImage"/>
   <div class="card-body">
-    <h5 class="card-title" *ngIf="hasTitle">
+    <h5 class="card-title text-center" *ngIf="hasTitle">
       <span *ngIf="hasIcon">
         <i class="fa" [ngClass]="icon"></i>
       </span>
       {{ title }}
     </h5>
-    <h6 class="card-subtitle mb-2 text-muted" *ngIf="hasSubtitle">
+    <h6 class="card-subtitle mb-2 text-muted text-center" *ngIf="hasSubtitle">
       {{ subtitle }}
     </h6>
     <ng-content></ng-content>
