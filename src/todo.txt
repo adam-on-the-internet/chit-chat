@@ -1,3 +1,4 @@
 1. add more data !
-2. better styling
+2. better styling (animations)
 3. add a way to tweet out one random chat daily
+4. weekly report of suggestions instead of immediate
