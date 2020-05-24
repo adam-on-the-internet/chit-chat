@@ -17,10 +17,10 @@ import {BodyComponent} from "./components/body/body.component";
 import {LoadingComponent} from "./components/loading/loading.component";
 import {CardComponent} from "./components/card/card.component";
 import {BodyAltComponent} from "./components/body-alt/body-alt.component";
-import {ChitChatOverviewComponent} from './components/chit-chat-overview/chit-chat-overview.component';
-import {ChitChatTableComponent} from './components/chit-chat-table/chit-chat-table.component';
-import {ChitChatFormComponent} from './components/chit-chat-form/chit-chat-form.component';
-import { ChitChatCardComponent } from './components/chit-chat-card/chit-chat-card.component';
+import {ChitChatOverviewComponent} from "./components/chit-chat-overview/chit-chat-overview.component";
+import {ChitChatTableComponent} from "./components/chit-chat-table/chit-chat-table.component";
+import {ChitChatFormComponent} from "./components/chit-chat-form/chit-chat-form.component";
+import { ChitChatCardComponent } from "./components/chit-chat-card/chit-chat-card.component";
 
 @NgModule({
   declarations: [

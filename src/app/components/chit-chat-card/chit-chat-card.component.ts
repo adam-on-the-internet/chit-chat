@@ -1,12 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from "@angular/core";
 import {ChitChat} from "../../models/ChitChat.model";
 import {BooleanHelper} from "../../utilities/boolean.util";
 import {ChitChatService} from "../../services/chit-chat.service";
 
 @Component({
-  selector: 'app-chit-chat-card',
-  templateUrl: './chit-chat-card.component.html',
-  styleUrls: ['./chit-chat-card.component.scss']
+  selector: "app-chit-chat-card",
+  templateUrl: "./chit-chat-card.component.html",
+  styleUrls: ["./chit-chat-card.component.scss"]
 })
 export class ChitChatCardComponent implements OnInit {
   public chitChat: ChitChat = null;

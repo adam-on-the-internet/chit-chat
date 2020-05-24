@@ -1,13 +1,13 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input} from "@angular/core";
 import {ChitChat} from "../../models/ChitChat.model";
 import {BooleanHelper} from "../../utilities/boolean.util";
 import {NavHelperService} from "../../services/nav-helper.service";
 import {ChitChatService} from "../../services/chit-chat.service";
 
 @Component({
-  selector: 'app-chit-chat-table',
-  templateUrl: './chit-chat-table.component.html',
-  styleUrls: ['./chit-chat-table.component.scss']
+  selector: "app-chit-chat-table",
+  templateUrl: "./chit-chat-table.component.html",
+  styleUrls: ["./chit-chat-table.component.scss"]
 })
 export class ChitChatTableComponent {
   @Input() public chitChats: ChitChat[] = [];

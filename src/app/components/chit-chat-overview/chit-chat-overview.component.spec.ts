@@ -1,16 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 
-import { ChitChatOverviewComponent } from './chit-chat-overview.component';
+import {ChitChatOverviewComponent} from "./chit-chat-overview.component";
+import {ChitChatTableComponent} from "../chit-chat-table/chit-chat-table.component";
+import {CardComponent} from "../card/card.component";
+import {BodyComponent} from "../body/body.component";
+import {LoadingComponent} from "../loading/loading.component";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {RouterTestingModule} from "@angular/router/testing";
 
-describe('ChitChatOverviewComponent', () => {
+describe("ChitChatOverviewComponent", () => {
   let component: ChitChatOverviewComponent;
   let fixture: ComponentFixture<ChitChatOverviewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChitChatOverviewComponent ]
+      declarations: [
+        ChitChatOverviewComponent, ChitChatTableComponent, CardComponent, BodyComponent, LoadingComponent,
+      ],
+      imports: [HttpClientTestingModule, RouterTestingModule, ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +28,7 @@ describe('ChitChatOverviewComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

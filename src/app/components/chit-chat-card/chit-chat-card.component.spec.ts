@@ -1,16 +1,20 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 
-import { ChitChatCardComponent } from './chit-chat-card.component';
+import {ChitChatCardComponent} from "./chit-chat-card.component";
+import {CardComponent} from "../card/card.component";
+import {LoadingComponent} from "../loading/loading.component";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
-describe('ChitChatCardComponent', () => {
+describe("ChitChatCardComponent", () => {
   let component: ChitChatCardComponent;
   let fixture: ComponentFixture<ChitChatCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChitChatCardComponent ]
+      declarations: [ChitChatCardComponent, CardComponent, LoadingComponent],
+      imports: [HttpClientTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +23,7 @@ describe('ChitChatCardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

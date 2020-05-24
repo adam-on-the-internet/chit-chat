@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from "@angular/core";
 import {BooleanHelper} from "../../utilities/boolean.util";
 import {ActivatedRoute} from "@angular/router";
 import {NavHelperService} from "../../services/nav-helper.service";
@@ -6,9 +6,9 @@ import {ChitChat} from "../../models/ChitChat.model";
 import {ChitChatService} from "../../services/chit-chat.service";
 
 @Component({
-  selector: 'app-chit-chat-form',
-  templateUrl: './chit-chat-form.component.html',
-  styleUrls: ['./chit-chat-form.component.scss']
+  selector: "app-chit-chat-form",
+  templateUrl: "./chit-chat-form.component.html",
+  styleUrls: ["./chit-chat-form.component.scss"]
 })
 export class ChitChatFormComponent implements OnInit {
   public chitChat: ChitChat = null;

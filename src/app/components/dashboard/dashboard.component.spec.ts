@@ -1,11 +1,14 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 
-import { DashboardComponent } from "./dashboard.component";
-import { RouterTestingModule } from "@angular/router/testing";
-import { BodyComponent } from "../body/body.component";
-import { HeaderComponent } from "../header/header.component";
-import { CardComponent } from "../card/card.component";
-import { BodyAltComponent } from "../body-alt/body-alt.component";
+import {DashboardComponent} from "./dashboard.component";
+import {RouterTestingModule} from "@angular/router/testing";
+import {BodyComponent} from "../body/body.component";
+import {HeaderComponent} from "../header/header.component";
+import {CardComponent} from "../card/card.component";
+import {BodyAltComponent} from "../body-alt/body-alt.component";
+import {ChitChatCardComponent} from "../chit-chat-card/chit-chat-card.component";
+import {LoadingComponent} from "../loading/loading.component";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe("DashboardComponent", () => {
   let component: DashboardComponent;
@@ -15,9 +18,9 @@ describe("DashboardComponent", () => {
     TestBed.configureTestingModule({
       declarations: [
         DashboardComponent, BodyComponent, HeaderComponent, CardComponent,
-        BodyAltComponent
+        BodyAltComponent, ChitChatCardComponent, LoadingComponent,
       ],
-      imports: [RouterTestingModule]
+      imports: [RouterTestingModule, HttpClientTestingModule]
     })
       .compileComponents();
   }));

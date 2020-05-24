@@ -1,13 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from "@angular/core";
 import {ChitChatService} from "../../services/chit-chat.service";
 import {ChitChat} from "../../models/ChitChat.model";
 import {BooleanHelper} from "../../utilities/boolean.util";
 import {NavHelperService} from "../../services/nav-helper.service";
 
 @Component({
-  selector: 'app-chit-chat-overview',
-  templateUrl: './chit-chat-overview.component.html',
-  styleUrls: ['./chit-chat-overview.component.scss']
+  selector: "app-chit-chat-overview",
+  templateUrl: "./chit-chat-overview.component.html",
+  styleUrls: ["./chit-chat-overview.component.scss"]
 })
 export class ChitChatOverviewComponent implements OnInit {
   public chitChats: ChitChat[] = null;

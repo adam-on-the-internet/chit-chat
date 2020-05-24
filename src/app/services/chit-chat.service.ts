@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {RestUrlBuilder} from "../utilities/rest-url-builder.util";
@@ -9,7 +9,7 @@ import {ChitChat} from "../models/ChitChat.model";
 const controller = "chitChat";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class ChitChatService {
   constructor(
