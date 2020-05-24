@@ -1,1 +1,29 @@
-<p>suggest works!</p>
+<app-body>
+  <div class="row">
+    <div class="col-md-8 mx-auto my-3">
+      <app-card [autoHeight]="false" [title]="'Suggest Chit Chats'">
+        <hr>
+        <section id="question-section">
+          <label for="question-input">1. Question</label>
+          <input type="text" class="form-control" id="question-input" [(ngModel)]="chitChat.question">
+        </section>
+        <br>
+        <section id="credit-section">
+          <label for="question-input">2. Who to Credit (optional)</label>
+          <input type="text" class="form-control" id="credit-input" [(ngModel)]="chitChat.credit">
+        </section>
+        <hr>
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="alert alert-info" *ngIf="!hasQuestion">
+              You must enter a question.
+            </div>
+            <button class="btn btn-primary btn-block" (click)="submit()" *ngIf="hasQuestion">
+              Submit
+            </button>
+          </div>
+        </div>
+      </app-card>
+    </div>
+  </div>
+</app-body>

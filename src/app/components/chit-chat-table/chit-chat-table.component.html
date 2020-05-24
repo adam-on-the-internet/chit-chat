@@ -13,7 +13,7 @@
       Question
     </th>
     <th>
-      Hidden
+      Shown
     </th>
     <th>
       Edit
@@ -26,7 +26,9 @@
   <tbody>
   <tr *ngFor="let chitChat of chitChats">
     <td>{{chitChat.question}}</td>
-    <td>{{chitChat.hidden}}</td>
+    <td>
+      <i class="fa fa-times" *ngIf="chitChat.hidden"></i>
+    </td>
     <td>
       <button class="btn btn-warning" (click)="edit(chitChat)">
         <i class="fa fa-pencil"></i>
