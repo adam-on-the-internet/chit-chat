@@ -32,7 +32,9 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Login);
   }
 
-  // PROJECTS
+  public goSuggest(): void {
+    this.goToRoute(ROUTES_ENUM.Suggest);
+  }
 
   public goChitChatOverview(): void {
     this.goToRoute(ROUTES_ENUM.ChitChatOverview);

@@ -21,6 +21,7 @@ import {ChitChatOverviewComponent} from "./components/chit-chat-overview/chit-ch
 import {ChitChatTableComponent} from "./components/chit-chat-table/chit-chat-table.component";
 import {ChitChatFormComponent} from "./components/chit-chat-form/chit-chat-form.component";
 import { ChitChatCardComponent } from "./components/chit-chat-card/chit-chat-card.component";
+import { SuggestComponent } from './components/suggest/suggest.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ChitChatCardComponent } from "./components/chit-chat-card/chit-chat-car
     ChitChatTableComponent,
     ChitChatFormComponent,
     ChitChatCardComponent,
+    SuggestComponent,
   ],
   imports: [
     BrowserModule,

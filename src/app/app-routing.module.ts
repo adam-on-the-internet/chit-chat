@@ -8,6 +8,7 @@ import {ProfileComponent} from "./components/profile/profile.component";
 import {AdminComponent} from "./components/admin/admin.component";
 import {ChitChatOverviewComponent} from "./components/chit-chat-overview/chit-chat-overview.component";
 import {ChitChatFormComponent} from "./components/chit-chat-form/chit-chat-form.component";
+import {SuggestComponent} from "./components/suggest/suggest.component";
 
 const routes: Routes = [
   // main
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: ROUTES_ENUM.Profile, component: ProfileComponent},
   {path: ROUTES_ENUM.Admin, component: AdminComponent},
   // projects
+  {path: ROUTES_ENUM.Suggest, component: SuggestComponent},
   {path: ROUTES_ENUM.ChitChatOverview, component: ChitChatOverviewComponent},
   {path: ROUTES_ENUM.ChitChatForm, component: ChitChatFormComponent},
   {path: ROUTES_ENUM.ChitChatForm + "/:id", component: ChitChatFormComponent},

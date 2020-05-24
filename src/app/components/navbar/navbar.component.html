@@ -19,13 +19,18 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="https://aoti-app-hub.herokuapp.com/donate" target="_blank">
-          Donate
+        <a class="nav-link" (click)="goToInfo()">
+          Info
         </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" (click)="goToInfo()">
-          Info
+        <a class="nav-link" (click)="goSuggest()">
+          Suggest
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="https://aoti-app-hub.herokuapp.com/donate" target="_blank">
+          Donate
         </a>
       </li>
       <ng-container *ngIf="isLoggedIn">
