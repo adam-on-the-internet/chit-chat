@@ -1,18 +1,20 @@
 <app-card [autoHeight]="false" [title]="'Chit Chat Card'" [subtitle]="'A conversation starter...'">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <button class="btn btn-outline-primary btn-block" (click)="loadRandom()">
+        Draw Another
+        <i class="fa fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
   <hr>
   <div id="question" *ngIf="ready; else loading">
     <h3 class="text-center">
       {{chitChat.question}}
     </h3>
-    <hr>
-    <div class="row">
-      <div class="col-md-4 mx-auto">
-        <button class="btn btn-primary btn-block" (click)="loadRandom()">
-          Draw Another
-          <i class="fa fa-arrow-right"></i>
-        </button>
-      </div>
-    </div>
+    <p *ngIf="chitChat.credit" class="text-center">
+      Credit: {{chitChat.credit}}
+    </p>
   </div>
 </app-card>
 
