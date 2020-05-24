@@ -8,10 +8,6 @@ import { CookieHelper } from "src/app/utilities/cookie.util";
 })
 export class ProfileComponent {
 
-  public get userDetails(): any {
-    return CookieHelper.getUserDetails();
-  }
-
   public get email(): any {
     return CookieHelper.email;
   }
